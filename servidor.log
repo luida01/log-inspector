@@ -1,0 +1,10 @@
+INFO: Servidor iniciado correctamente en puerto 8080
+INFO: Usuario carlos@email.com inició sesión
+ERROR: Fallo al conectar con la base de datos MySQL
+INFO: Pago procesado para orden #4592 - $1,200 DOP
+CRITICAL: Disco duro al 98% de capacidad - riesgo de colapso
+ERROR: Timeout en API de pasarela de pago VisaNet
+INFO: Usuario maria@email.com cerró sesión
+CRITICAL: Memoria RAM agotada - servidor no responde
+ERROR: Certificado SSL expirado - conexiones inseguras
+INFO: Backup automático completado a las 03:00 AM
