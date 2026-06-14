@@ -162,7 +162,7 @@ Todas las preguntas del challenge (diferencia entre `>` y `>>`, `whoami` y `date
 
 ## Autor
 
-Proyecto parte del programa Antigravity — Ingenieria DevOps & AIOps.
+Proyecto parte del programa IQTek — Ingenieria DevOps & AIOps.
 
 ---
 
