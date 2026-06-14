@@ -65,14 +65,26 @@ El script genera dos salidas:
 | **Pantalla** | Resumen rapido: cuantos errores y criticos se encontraron |
 | **alerta_de_hoy.txt** | Reporte completo con encabezado, fecha, usuario y listado detallado |
 
-### 4. Ejemplo de salida del reporte (`alerta_de_hoy.txt`)
+### 4. Capturas de pantalla del resultado
+
+**Ejecución en terminal:**
+
+![Ejecución en terminal](screenshot-terminal.png)
+
+**Reporte generado (`alerta_de_hoy.txt`):**
+
+![Reporte generado](screenshot-reporte.png)
+
+---
+
+### 5. Ejemplo de salida del reporte (texto)
 
 ```
 ======================================
   REPORTE DE ALERTAS - INSPECTOR LOG
 ======================================
 Generado por  : luisd
-Fecha y hora  : 14/06/2026 a las 15:30:45
+Fecha y hora  : 14/06/2026 a las 19:35:11
 Archivo       : servidor.log
 ======================================
 
@@ -124,6 +136,19 @@ Este proyecto no es solo un filtro de texto; es el **cimiento de AIOps**, la apl
 - Conectar el script a un dashboard como Grafana para visualizacion en tiempo real
 - Integrar con sistemas de alerta (Slack, Telegram, email)
 - Alimentar modelos de machine learning para **mantenimiento predictivo**
+
+---
+
+## Desafíos Extra
+
+Además de los 4 retos principales, el proyecto responde estos 4 desafíos avanzados:
+
+| # | Desafío | Respuesta resumida | Detalle completo |
+|---|---------|-------------------|-----------------|
+| 1 | **¿Automatizar el reporte diario?** | Sí, con `cron` (Linux) o Task Scheduler (Windows). El script puede generar archivos con fecha en el nombre: `alerta_20260614.txt`. | Ver [preguntas_investigacion.md](preguntas_investigacion.md) sección 3 |
+| 2 | **¿1 millón de líneas?** | `grep` lo maneja sin problema. Lee línea por línea, no carga todo en memoria. | Ver [preguntas_investigacion.md](preguntas_investigacion.md) sección 4 |
+| 3 | **Root Cause Analysis** | El script es el **paso 1** del RCA: aísla el ruido, correlaciona eventos por tiempo y da trazabilidad. | Ver [preguntas_investigacion.md](preguntas_investigacion.md) sección 5 |
+| 4 | **Seguridad con `sudo`** | Los logs contienen datos sensibles (emails, IPs, errores). Solo personal autorizado debe leerlos. | Ver [preguntas_investigacion.md](preguntas_investigacion.md) sección 6 |
 
 ---
 
